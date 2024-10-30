@@ -1,0 +1,31 @@
+@use '../abstracts/colours' as *;
+
+.carousel_coverImage_spacer {
+  width: 100%;
+  aspect-ratio: 6 / 7;
+}
+
+.carousel_button {
+  width: 2rem;
+  height: 2rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: none;
+  background-color: lighten($color: $grey-light, $amount: 10);
+  opacity: 0.75;
+  transition: opacity 0.3s linear;
+
+  &:hover {
+    opacity: 1;
+    transition: opacity 0.3s linear;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+
+    &:hover {
+      cursor: default;
+      opacity: 0.5;
+    }
+  }
+}

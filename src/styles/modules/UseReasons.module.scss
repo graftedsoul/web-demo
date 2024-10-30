@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use '../public/variables.scss' as *;
+@use '../vendor/bootstrap' as *;
+
+.overlapping_icons {
+  display: grid;
+  width: 6rem;
+  height: fit-content;
+
+  :first-child {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  :nth-child(2) {
+    grid-area: 1 / 1 / 2 / 2;
+    margin-top: 1.2rem;
+    margin-left: 2rem;
+
+    @media screen and (min-width: map.get($grid-breakpoints, 'md')) {
+      margin-top: 1rem;
+      margin-left: 1.5rem;
+    }
+  }
+}

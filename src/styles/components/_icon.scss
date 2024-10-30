@@ -1,0 +1,238 @@
+@use 'sass:math';
+@use '../abstracts/colours' as *;
+
+$base-size: 18px;
+
+/* prettier-ignore */
+@mixin size($multiplier) {
+  width: $base-size * $multiplier;
+  height: $base-size * $multiplier;
+  stroke-width: (round($number: (($base-size / ($base-size * math.pow($multiplier, $multiplier))) * 100)) / 100);
+}
+
+.icon {
+  display: inline-block;
+  width: $base-size;
+  height: $base-size;
+  aspect-ratio: 1 / 1;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    vertical-align: unset;
+  }
+
+  path {
+    vector-effect: non-scaling-stroke;
+  }
+
+  /* -------- SIZE / OPTICAL SIZE -------- */
+  // TODO: fix these (somehow)
+
+  &_xsmall {
+    @include size(1);
+  }
+
+  &_small {
+    @include size(1.5);
+  }
+
+  &_medium {
+    @include size(2);
+  }
+
+  &_large {
+    @include size(2.5);
+  }
+
+  &_xlarge {
+    @include size(3);
+  }
+
+  &_xxlarge {
+    @include size(4);
+  }
+
+  /* -------- COLOUR -------- */
+  &_blue {
+    fill: $blue-dark;
+    stroke: $blue-dark;
+  }
+
+  &_green {
+    fill: $green-dark;
+    stroke: $green-dark;
+  }
+
+  &_yellow {
+    fill: $yellow-dark;
+    stroke: $yellow-dark;
+  }
+
+  &_orange {
+    fill: $orange-dark;
+    stroke: $orange-dark;
+  }
+
+  &_pink {
+    fill: $pink-dark;
+    stroke: $pink-dark;
+  }
+
+  &_purple {
+    fill: $purple-dark;
+    stroke: $purple-dark;
+  }
+
+  &_black {
+    fill: $dark;
+    stroke: $dark;
+  }
+
+  &_grey {
+    fill: $grey-mid;
+    stroke: $grey-mid;
+  }
+
+  &_white {
+    fill: $light;
+    stroke: $light;
+  }
+
+  /* -------- GRADIENT -------- */
+  &_gradient {
+    stroke-width: 0 !important;
+  }
+}
+
+/* -------- ICON GRADIENT FILLS -------- */
+.icon_gradient.icon_ {
+  &blue {
+    fill: url('#gradient_blue');
+  }
+
+  &green {
+    fill: url('#gradient_green');
+  }
+
+  &yellow {
+    fill: url('#gradient_yellow');
+  }
+
+  &orange {
+    fill: url('#gradient_orange');
+  }
+
+  &pink {
+    fill: url('#gradient_pink');
+  }
+
+  &purple {
+    fill: url('#gradient_purple');
+  }
+
+  &black {
+    fill: url('#gradient_black');
+  }
+
+  &grey {
+    fill: url('#gradient_grey');
+  }
+
+  &white {
+    fill: url('#gradient_white');
+  }
+}
+
+/* -------- GRADIENT COLOURS -------- */
+#gradient_ {
+  &blue .gradient_colour_ {
+    &start {
+      stop-color: $blue-mid;
+    }
+
+    &end {
+      stop-color: $blue-dark;
+    }
+  }
+
+  &green .gradient_colour_ {
+    &start {
+      stop-color: $green-mid;
+    }
+
+    &end {
+      stop-color: $green-dark;
+    }
+  }
+
+  &yellow .gradient_colour_ {
+    &start {
+      stop-color: $yellow-mid;
+    }
+
+    &end {
+      stop-color: $yellow-dark;
+    }
+  }
+
+  &orange .gradient_colour_ {
+    &start {
+      stop-color: $orange-mid;
+    }
+
+    &end {
+      stop-color: $orange-dark;
+    }
+  }
+
+  &pink .gradient_colour_ {
+    &start {
+      stop-color: $pink-mid;
+    }
+
+    &end {
+      stop-color: $pink-dark;
+    }
+  }
+
+  &purple .gradient_colour_ {
+    &start {
+      stop-color: $purple-mid;
+    }
+
+    &end {
+      stop-color: $purple-dark;
+    }
+  }
+
+  &black .gradient_colour_ {
+    &start {
+      stop-color: $grey-mid;
+    }
+
+    &end {
+      stop-color: $black;
+    }
+  }
+
+  &grey .gradient_colour_ {
+    &start {
+      stop-color: $grey-mid;
+    }
+
+    &end {
+      stop-color: $grey-dark;
+    }
+  }
+
+  &white .gradient_colour_ {
+    &start {
+      stop-color: $white;
+    }
+
+    &end {
+      stop-color: $light;
+    }
+  }
+}

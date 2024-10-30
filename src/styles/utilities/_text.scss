@@ -1,0 +1,59 @@
+@use '../abstracts/typography' as *;
+
+.text_500 {
+  font-weight: 500 !important;
+}
+
+.text_600 {
+  font-weight: 600 !important;
+}
+
+.text_small {
+  @include text-small;
+}
+
+.text_xsmall {
+  @include text-xsmall;
+}
+
+.text_large {
+  @include text-large;
+}
+
+.header_xxl,
+.main_header {
+  @include header-xxl;
+}
+
+.header_xl {
+  @include header-xl;
+}
+
+.header_l {
+  @include header-l;
+}
+
+.header_m,
+.section_header {
+  @include header-m;
+}
+
+.header_s {
+  @include header-s;
+}
+
+.card_header {
+  @include header-card;
+}
+
+.sub_header {
+  @include header-sub;
+}
+
+.card_sub_header {
+  @include header-card-sub;
+}
+
+.elevated_header {
+  @include header-elevated;
+}

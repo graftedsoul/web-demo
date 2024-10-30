@@ -1,0 +1,17 @@
+@use 'sass:map';
+@use '../abstracts/typography' as *;
+@use '../vendor' as *;
+
+:root {
+  @each $font-size-key, $font-size-value in $font-sizes-regular {
+    --fs-#{$font-size-key}: #{$font-size-value};
+  }
+}
+
+@media screen and (max-width: map.get($grid-breakpoints, 'sm')) {
+  :root {
+    @each $font-size-key, $font-size-value in $font-sizes-small {
+      --fs-#{$font-size-key}: #{$font-size-value};
+    }
+  }
+}

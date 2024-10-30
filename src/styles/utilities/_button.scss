@@ -1,0 +1,15 @@
+@use '../abstracts/typography' as *;
+
+.button {
+  &_small {
+    @include text-small;
+  }
+
+  &_xsmall {
+    @include text-xsmall;
+  }
+
+  &_large {
+    @include text-large;
+  }
+}

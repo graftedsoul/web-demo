@@ -1,0 +1,146 @@
+@use 'sass:map';
+@use '../abstracts/colours' as *;
+@use '../abstracts/typography' as *;
+
+$enable-negative-margins: true;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 1,
+  4: $spacer * 1.5,
+  5: $spacer * 2,
+  6: $spacer * 3,
+  7: $spacer * 4,
+  8: $spacer * 6,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+/* ---------- POSITION ---------- */
+$position-values: (
+  0: 0,
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+);
+
+/* ---------- Z-INDEX ---------- */
+$zindex-levels: (
+  n3: -3,
+  n2: -2,
+  n1: -1,
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  6: 6,
+  9000: 9000,
+  9990: 9990,
+  9999: 9999,
+);
+
+/* ---------- TYPOGRAPHY ---------- */
+$font-family-sans-serif: $ff-inter-tight;
+
+$h1-font-size: var(--fs-header-l);
+$h2-font-size: var(--fs-header-m);
+$h3-font-size: var(--fs-header-s);
+$h4-font-size: var(--fs-header-sub);
+$h5-font-size: var(--fs-header-elevated);
+$h6-font-size: var(--fs-body);
+
+/* ---------- BODY ---------- */
+$body-color: $dark;
+$body-bg: $light;
+
+/* $body-secondary-color: rgba($body-color, 0.75) !default;
+$body-secondary-bg: $gray-200 !default;
+
+$body-tertiary-color: rgba($body-color, 0.5) !default;
+$body-tertiary-bg: $gray-100 !default; */
+
+$body-emphasis-color: $black;
+
+/* ---------- FOCUS RING ---------- */
+$focus-ring-width: 0.1rem;
+$focus-ring-opacity: 1;
+$focus-ring-color: rgba($primary, $focus-ring-opacity);
+$focus-ring-blur: 0;
+$focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color;
+
+/* ---------- LINK ---------- */
+$link-color: $body-color;
+$link-decoration: none;
+
+/* ---------- NAVBAR ---------- */
+$navbar-light-color: $dark;
+$navbar-light-hover-color: rgba($dark, 0.75);
+$navbar-light-active-color: $black;
+
+$navbar-dark-color: $light;
+$navbar-dark-hover-color: rgba($light, 0.75);
+$navbar-dark-active-color: $white;
+
+/* ---------- PARAGRAPH ---------- */
+/* $paragraph-margin-bottom: 1rem; */
+
+/* ---------- INPUT + BUTTON ---------- */
+$input-btn-padding-y: map-get($spacers, 1);
+$input-btn-padding-x: map-get($spacers, 3);
+
+// $input-btn-padding-y-sm: ;
+// $input-btn-padding-x-sm: ;
+
+/* ---------- BUTTON ---------- */
+$btn-border-radius: 99999px;
+$btn-padding-y: $input-btn-padding-y;
+$btn-padding-x: $input-btn-padding-x;
+$btn-box-shadow: $focus-ring-box-shadow;
+
+/* ---------- CARD ---------- */
+$card-bg: $white;
+
+/* ---------- ACCORDION ---------- */
+$accordion-padding-y: map-get($spacers, '3');
+$accordion-padding-x: map-get($spacers, '3');
+
+$accordion-color: $dark;
+$accordion-bg: $white;
+
+$accordion-body-padding-y: $accordion-padding-y;
+$accordion-body-padding-x: 0;
+
+$accordion-button-padding-y: $accordion-padding-y;
+$accordion-button-padding-x: 0;
+
+$accordion-button-active-bg: $accordion-bg;
+$accordion-button-active-color: $accordion-color;
+
+$accordion-icon-color: $grey-mid;
+$accordion-icon-active-color: $grey-mid;
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-color}' stroke-width='2px' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='#{$accordion-icon-active-color}' stroke-width='2px' stroke-linecap='round' stroke-linejoin='round'><path d='M2 5L8 11L14 5'/></svg>");
+
+.accordion-button:focus:not(:focus-visible) {
+  z-index: inherit;
+  outline: 0;
+  box-shadow: none;
+}
+
+.accordion-button:focus-visible {
+  z-index: 3;
+  box-shadow: $focus-ring-box-shadow;
+}

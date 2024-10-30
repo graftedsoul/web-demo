@@ -1,0 +1,12 @@
+@use '../abstracts' as *;
+
+html {
+  @include text-regular();
+}
+
+body {
+  background-color: $light;
+  color: $dark;
+  position: relative;
+  @include text-regular();
+}

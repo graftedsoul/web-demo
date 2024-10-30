@@ -1,0 +1,9 @@
+@use '../abstracts/typography' as *;
+
+.btn {
+  // border-radius: 9999px !important;
+
+  &-small {
+    @include text-xsmall();
+  }
+}

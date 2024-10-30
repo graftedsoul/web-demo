@@ -1,0 +1,163 @@
+@use './font-face/' as *;
+
+$fs-header-xxl: var(--fs-header-xxl);
+$fs-header-xl: var(--fs-header-xl);
+$fs-header-l: var(--fs-header-l);
+$fs-header-m: var(--fs-header-m);
+$fs-header-s: var(--fs-header-s);
+$fs-header-sub: var(--fs-header-sub);
+$fs-header-elevated: var(--fs-header-elevated);
+$fs-body: var(--fs-body);
+$fs-large: var(--fs-large);
+$fs-small: var(--fs-small);
+$fs-xsmall: var(--fs-xsmall);
+
+$ff-inter: 'Inter', system-ui, sans-serif;
+$ff-inter-tight: 'Inter Tight', system-ui, sans-serif;
+
+$body-font: $ff-inter-tight;
+
+$font-sizes-small: (
+  'header-xxl': 56px,
+  'header-xl': 48px,
+  'header-l': 32px,
+  'header-m': 28px,
+  'header-s': 24px,
+  'header-sub': 21px,
+  'header-elevated': 19px,
+  'body': 14px,
+  'large': 18px,
+  'small': 12px,
+  'xsmall': 12px,
+);
+
+$font-sizes-regular: (
+  'header-xxl': 80px,
+  'header-xl': 72px,
+  'header-l': 56px,
+  'header-m': 48px,
+  'header-s': 32px,
+  'header-sub': 28px,
+  'header-elevated': 24px,
+  'body': 17px,
+  'large': 20px,
+  'small': 14px,
+  'xsmall': 12px,
+);
+
+@mixin text-regular() {
+  font-size: $fs-body !important;
+  font-family: $body-font !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.4 !important;
+}
+
+@mixin text-large() {
+  font-size: $fs-large !important;
+  font-family: $body-font !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.4 !important;
+}
+
+@mixin text-small() {
+  font-size: $fs-small !important;
+  font-family: $body-font !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.4 !important;
+}
+
+@mixin text-xsmall() {
+  font-size: $fs-xsmall !important;
+  font-family: $body-font !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.4 !important;
+}
+
+@mixin header-xxl() {
+  font-size: $fs-header-xxl !important;
+  font-family: $body-font !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+}
+
+@mixin header-xl() {
+  font-size: $fs-header-xl !important;
+  font-family: $body-font !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+}
+
+@mixin header-l() {
+  font-size: $fs-header-l !important;
+  font-family: $body-font !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.1 !important;
+}
+
+@mixin header-m() {
+  font-size: $fs-header-m !important;
+  font-family: $body-font !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.1 !important;
+}
+
+@mixin header-s() {
+  font-size: $fs-header-s !important;
+  font-family: $body-font !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.2 !important;
+}
+
+@mixin header-card() {
+  font-size: $fs-header-sub !important;
+  font-family: $body-font !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.2 !important;
+}
+
+@mixin header-sub() {
+  font-size: $fs-header-sub !important;
+  font-family: $body-font !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.2 !important;
+}
+
+@mixin header-elevated() {
+  font-size: $fs-header-elevated !important;
+  font-family: $body-font !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.3 !important;
+}
+
+@mixin header-card-sub() {
+  font-size: $fs-body !important;
+  font-family: $body-font !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  text-decoration: none !important;
+  line-height: 1.4 !important;
+}
