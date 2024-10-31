@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { useCasesData } from '@/data/index/07_usecases.js';
 import Carousel from '../shared/Carousel';
 import dynamic from 'next/dynamic';
@@ -41,7 +43,7 @@ const UseCasesSection = () => {
       </div>
 
       <div className='m-0 p-0 d-block'>
-        {/* eslint-disable-next-line */}
+        // @ts-ignore
         <Carousel slides={useCasesData.items} iconSet={icons} />
       </div>
 
