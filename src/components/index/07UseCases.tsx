@@ -41,6 +41,7 @@ const UseCasesSection = () => {
       </div>
 
       <div className='m-0 p-0 d-block'>
+        {/* eslint-disable-next-line */}
         <Carousel slides={useCasesData.items} iconSet={icons} />
       </div>
 

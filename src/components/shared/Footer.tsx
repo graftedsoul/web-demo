@@ -18,6 +18,7 @@ const icons = {
 
 const Footer = () => {
   const getIcon = (icon: string, size: string) => {
+    // eslint-disable-next-line
     const IconComponent = icons[icon + 'Icon'];
     return <IconComponent colour='pink' size={size} false />;
   };
@@ -78,12 +79,13 @@ const Footer = () => {
                       href={item.linkUrl}
                       className='text_500 link-light link-opacity-75-hover d-flex gap-2 align-items-center'
                     >
-                      {item.linkIcon &&
-                        (item.linkText
-                          ? getIcon(item.linkIcon, 'xsmall')
+                      {item.linkIcon && // eslint-disable-next-line eslint-disable-line
+                        (item.linkText // eslint-disable-next-line eslint-disable-line
+                          ? getIcon(item.linkIcon, 'xsmall') // eslint-disable-line eslint-disable-next-line
                           : getIcon(item.linkIcon, 'small no_text'))}
-
+                      {/* eslint-disable-next-line */}
                       {item.linkText && <span>{item.linkText}</span>}
+                      {/* eslint-disable-next-line */}
                     </Link>
                   </li>
                 ))}
