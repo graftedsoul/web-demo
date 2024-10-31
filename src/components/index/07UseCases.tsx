@@ -6,16 +6,15 @@ import { ComponentType } from 'react';
 import { SVGProps } from '@/utils/SVGProps.ts';
 
 const icons: { [key: string]: ComponentType<SVGProps> } = {
-  MoneyDollarBoxIcon: dynamic(() => import('../icons/MoneyDollarBoxIcon.tsx')),
-  ShoppingCartIcon: dynamic(() => import('../icons/ShoppingCartIcon.tsx')),
-  FirstAidKitIcon: dynamic(() => import('../icons/FirstAidKitIcon.tsx')),
-  ShipIcon: dynamic(() => import('../icons/ShipIcon.tsx')),
-  BriefcaseIcon: dynamic(() => import('../icons/BriefcaseIcon.tsx')),
-  BitcoinIcon: dynamic(() => import('../icons/BitcoinIcon.tsx')),
+  PencilIcon: dynamic(() => import('../icons/PencilIcon.tsx')),
+  BallPenIcon: dynamic(() => import('../icons/BallPenIcon.tsx')),
+  QuillPenIcon: dynamic(() => import('../icons/QuillPenIcon.tsx')),
+  MarkPenIcon: dynamic(() => import('../icons/MarkPenIcon.tsx')),
+  BrushIcon: dynamic(() => import('../icons/BrushIcon.tsx')),
   ExternalLinkIcon: dynamic(() => import('../icons/ExternalLinkIcon.tsx')),
 };
 
-function getIcon(
+/* function getIcon(
   icon: string,
   size: 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge',
   colour:
@@ -32,16 +31,16 @@ function getIcon(
 ) {
   const IconComponent = icons[icon + 'Icon'];
   return <IconComponent size={size} colour={colour} isGradient={isGradient} />;
-}
+} */
 
 const UseCasesSection = () => {
   return (
-    <section id="index_useCases" className="px-3 px-md-6 px-xl-8">
-      <div className="text_container mb-5">
-        <h2 className="section_header">{useCasesData.title}</h2>
+    <section id='index_useCases' className='px-3 px-md-6 px-xl-8'>
+      <div className='text_container mb-5'>
+        <h2 className='section_header'>{useCasesData.title}</h2>
       </div>
 
-      <div className="m-0 p-0 d-block">
+      <div className='m-0 p-0 d-block'>
         <Carousel slides={useCasesData.items} iconSet={icons} />
       </div>
 

@@ -57,7 +57,7 @@ const Carousel = (props: CarouselProps) => {
       | 'black'
       | 'grey'
       | 'white' = 'black',
-    isGradient: boolean = false,
+    isGradient: boolean = false
   ) {
     const IconComponent = props.iconSet![icon + 'Icon'];
     return (
@@ -88,16 +88,16 @@ const Carousel = (props: CarouselProps) => {
   useEffect(() => {
     const cardWidth = (
       (carouselRef.current! as HTMLElement).querySelector(
-        '.cards_container article.carousel_card',
+        '.cards_container article.carousel_card'
       ) as HTMLElement
     ).offsetWidth;
 
     const margin = parseInt(
       window.getComputedStyle(
         (carouselRef.current! as HTMLElement).querySelector(
-          '.cards_container',
-        ) as HTMLElement,
-      ).gap,
+          '.cards_container'
+        ) as HTMLElement
+      ).gap
     );
 
     const slideWidth = cardWidth + margin;
@@ -126,11 +126,11 @@ const Carousel = (props: CarouselProps) => {
 
     gsap.to(
       (carouselRef.current! as HTMLElement).querySelector(
-        '.cards_container',
+        '.cards_container'
       ) as HTMLElement,
       {
         x: newPos,
-      },
+      }
     );
   }, [currentSlide, totalWidth, slidesCount, uniqueId]);
 
@@ -145,10 +145,10 @@ const Carousel = (props: CarouselProps) => {
   }
 
   return (
-    <section id={uniqueId} className="carousel" ref={carouselRef}>
+    <section id={uniqueId} className='carousel' ref={carouselRef}>
       <div
         id={uniqueId + '_cardsContainer'}
-        className="cards_container d-flex flex-nowrap align-content-stretch gap-3"
+        className='cards_container d-flex flex-nowrap align-content-stretch gap-3'
       >
         {props.slides.map((slide, index) => (
           <article
@@ -157,16 +157,16 @@ const Carousel = (props: CarouselProps) => {
             className={`carousel_card col-10 col-md-5 col-lg-4 col-xl-3 d-flex flex-column justify-content-between p-3 rounded-4 position-relative overflow-hidden ${slide.backgroundType === 'dark' ? ' bg-black text-white' : ' bg-white text-black'}`}
             style={{ isolation: 'isolate' }}
           >
-            <div className="content_container">
-              <div className="icon_container">
+            <div className='content_container'>
+              <div className='icon_container'>
                 {slide.icon && (
-                  <div className="icon_container ms-n1 mb-3">
-                    {getIcon(slide.icon, 'large', 'blue', true)}
+                  <div className='icon_container ms-n1 mb-3'>
+                    {getIcon(slide.icon, 'xlarge', 'pink', true)}
                   </div>
                 )}
               </div>
 
-              <div className="text_container">
+              <div className='text_container'>
                 {slide.title && (
                   <h3 className={`card_header mb-3`}>{slide.title}</h3>
                 )}
@@ -180,9 +180,9 @@ const Carousel = (props: CarouselProps) => {
                         <li
                           key={uniqueId + '_listItem_' + index}
                           id={uniqueId + '_listItem_' + index}
-                          className="d-flex"
+                          className='d-flex'
                         >
-                          <div className="me-2 text-primary">&#9702;</div>
+                          <div className='me-2 text-primary'>&#9702;</div>
                           {textItem}
                         </li>
                       ))}
@@ -206,11 +206,11 @@ const Carousel = (props: CarouselProps) => {
                         src={slide.image.imageUrl}
                         alt={slide.image.imageAlt}
                         fill
-                        sizes="100vw"
-                        className="image_autosize object-fit-cover"
+                        sizes='100vw'
+                        className='image_autosize object-fit-cover'
                       />
                       <div
-                        className="overlay_gradient position-absolute top-0 start-0 w-100 h-50"
+                        className='overlay_gradient position-absolute top-0 start-0 w-100 h-50'
                         {...(slide.backgroundType === 'dark' && {
                           style: {
                             backgroundImage:
@@ -225,25 +225,25 @@ const Carousel = (props: CarouselProps) => {
                       alt={slide.image.imageAlt}
                       width={0}
                       height={0}
-                      sizes="100vw"
-                      className="image_autosize"
+                      sizes='100vw'
+                      className='image_autosize'
                     />
                   ))}
               </div>
 
               {slide.image?.coverImage && (
-                <div className="carousel_coverImage_spacer"></div>
+                <div className='carousel_coverImage_spacer'></div>
               )}
             </div>
 
-            <div className="button_container mt-3 mx-auto">
+            <div className='button_container mt-3 mx-auto'>
               {slide.button && (
-                <Link href={slide.button.buttonUrl} className="btn btn-primary">
+                <Link href={slide.button.buttonUrl} className='btn btn-primary'>
                   {slide.button.buttonText}
 
                   {slide.button.buttonIcon && (
-                    <div className="icon_container d-inline-block align-middle ms-3 mt-1">
-                      {getIcon(slide.button.buttonIcon, 'xsmall', 'white')}
+                    <div className='icon_container d-inline-block align-middle ms-3 mt-1'>
+                      {getIcon(slide.button.buttonIcon, 'xsmall', 'black')}
                     </div>
                   )}
                 </Link>
@@ -255,21 +255,21 @@ const Carousel = (props: CarouselProps) => {
 
       <div
         id={uniqueId + '_slideButton_container'}
-        className="slideButton_container w-100 px-3 d-flex gap-2 justify-content-end mt-3"
+        className='slideButton_container w-100 px-3 d-flex gap-2 justify-content-end mt-3'
       >
         <button
           onClick={onClickPrev}
           id={uniqueId + '_prevButton'}
-          className="carousel_button prev_button d-flex align-items-center justify-content-center pe-2"
+          className='carousel_button prev_button d-flex align-items-center justify-content-center pe-2'
         >
-          <ArrowLeftIcon size="small" colour="grey" />
+          <ArrowLeftIcon size='small' colour='grey' />
         </button>
         <button
           onClick={onClickNext}
           id={uniqueId + '_nextButton'}
-          className="carousel_button next_button d-flex align-items-center justify-content-center ps-2"
+          className='carousel_button next_button d-flex align-items-center justify-content-center ps-2'
         >
-          <ArrowRightIcon size="small" colour="grey" />
+          <ArrowRightIcon size='small' colour='grey' />
         </button>
       </div>
     </section>

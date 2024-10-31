@@ -53,7 +53,7 @@ $zindex-levels: (
 );
 
 /* ---------- TYPOGRAPHY ---------- */
-$font-family-sans-serif: $ff-inter-tight;
+$font-family-sans-serif: $body-font;
 
 $h1-font-size: var(--fs-header-l);
 $h2-font-size: var(--fs-header-m);
@@ -105,6 +105,9 @@ $input-btn-padding-x: map-get($spacers, 3);
 // $input-btn-padding-x-sm: ;
 
 /* ---------- BUTTON ---------- */
+$btn-color: $white;
+$btn-link-color: $white;
+$btn-font-weight: 500;
 $btn-border-radius: 99999px;
 $btn-padding-y: $input-btn-padding-y;
 $btn-padding-x: $input-btn-padding-x;

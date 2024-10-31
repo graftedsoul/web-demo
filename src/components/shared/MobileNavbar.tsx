@@ -77,7 +77,7 @@ const MobileNavbar = () => {
           xPercent: 120,
           display: 'none',
         },
-        '<',
+        '<'
       )
       .to(submenu, {
         display: 'none',
@@ -103,53 +103,53 @@ const MobileNavbar = () => {
 
   return (
     <nav
-      className="navbar container-sm px-3 px-md-6 px-xl-8"
-      id="global_navbar"
+      className='navbar container-sm px-3 px-md-6 px-xl-8'
+      id='global_navbar'
     >
-      <Link className="navbar-brand" href={navbarData.logo.logoUrl}>
+      <Link className='navbar-brand' href={navbarData.logo.logoUrl}>
         <Image
           src={navbarData.logo.logoImageUrl}
           alt={navbarData.logo.logoImageAlt}
-          width={75}
-          height={30}
+          width={128}
+          height={20}
           priority={true}
         />
       </Link>
 
       <button
-        className="navbar-toggler link-opacity-75-hover"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#global_navbar_offcanvas"
-        aria-controls="#lobal_navbar_offcanvas"
+        className='navbar-toggler link-opacity-75-hover'
+        type='button'
+        data-bs-toggle='offcanvas'
+        data-bs-target='#global_navbar_offcanvas'
+        aria-controls='#lobal_navbar_offcanvas'
       >
-        <MoreIcon colour="white" size="small" />
+        <MoreIcon colour='white' size='small' />
       </button>
 
       <div
-        className="offcanvas offcanvas-start bg-black border-0 vw-100 vh-100"
-        id="global_navbar_offcanvas"
-        data-bs-scroll="false"
-        data-bs-backdrop="false"
-        data-bs-theme="dark"
+        className='offcanvas offcanvas-start bg-black border-0 vw-100 vh-100'
+        id='global_navbar_offcanvas'
+        data-bs-scroll='false'
+        data-bs-backdrop='false'
+        data-bs-theme='dark'
         tabIndex={-1}
       >
-        <div className="offcanvas-header justify-content-end">
-          <h2 className="offcanvas-title visually-hidden">Navigasyon</h2>
+        <div className='offcanvas-header justify-content-end'>
+          <h2 className='offcanvas-title visually-hidden'>Navigasyon</h2>
           <button
-            type="button"
-            className="p-0 border-0 bg-black bg-opacity-10 link-opacity-75-hover"
-            data-bs-dismiss="offcanvas"
-            aria-label="Close"
+            type='button'
+            className='p-0 border-0 bg-black bg-opacity-10 link-opacity-75-hover'
+            data-bs-dismiss='offcanvas'
+            aria-label='Close'
           >
-            <CloseIcon colour="white" size="small" />
+            <CloseIcon colour='white' size='small' />
           </button>
         </div>
 
-        <div className="offcanvas-body position-relative">
-          <div className="main_nav" id="global_navbar_main_nav">
+        <div className='offcanvas-body position-relative'>
+          <div className='main_nav' id='global_navbar_main_nav'>
             {/* navigation links list */}
-            <ul className="navbar-nav text_large text_600">
+            <ul className='navbar-nav text_large text_600'>
               {navbarData.links.map((link, index) => (
                 <li
                   className={`nav-item ${link.dropdownItems.length > 0 ? ' submenu_parent' : ''}`}
@@ -170,8 +170,8 @@ const MobileNavbar = () => {
                     {link.linkText}
 
                     {link.dropdownItems.length > 0 && (
-                      <div className="d-inline float-end me-3">
-                        <ArrowRightIcon colour="white" size="small" />
+                      <div className='d-inline float-end me-3'>
+                        <ArrowRightIcon colour='white' size='small' />
                       </div>
                     )}
                   </Link>
@@ -179,22 +179,22 @@ const MobileNavbar = () => {
                   {/* dropdown links list */}
                   {link.dropdownItems.length > 0 && (
                     <div
-                      className="submenu p-0 bg-black position-absolute top-0 start-0 w-100 h-100 z-9000"
+                      className='submenu p-0 bg-black position-absolute top-0 start-0 w-100 h-100 z-9000'
                       id={'submenu_' + index}
                     >
                       <ul
-                        className="submenu_nav navbar-nav p-0"
+                        className='submenu_nav navbar-nav p-0'
                         id={'submenuNav_' + index}
                       >
                         <li>
                           <Link
-                            href="#"
-                            role="button"
-                            className="submenu_backlink text_600 header_s nav-link link-light"
+                            href='#'
+                            role='button'
+                            className='submenu_backlink text_600 header_s nav-link link-light'
                             onClick={hideSubmenu}
                           >
-                            <div className="d-inline-block ms-n2 me-3 align-top">
-                              <ArrowLeftIcon colour="white" size="small" />
+                            <div className='d-inline-block ms-n2 me-3 align-top'>
+                              <ArrowLeftIcon colour='white' size='small' />
                             </div>
                             {link.linkText}
                           </Link>
@@ -221,10 +221,10 @@ const MobileNavbar = () => {
             </ul>
 
             {/* buttons list */}
-            <div className="buttons_container d-flex justify-content-center mt-8">
+            <div className='buttons_container d-flex justify-content-center gap-2 mt-8'>
               {navbarData.buttons.map((button, index) => (
                 <Link
-                  className="btn btn-primary text_600"
+                  className={`btn ${'btn-' + button.buttonType} text_600`}
                   href={button.buttonUrl}
                   key={'navbarCTA_' + index}
                   id={'navbarCTA_' + index}

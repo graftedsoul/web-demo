@@ -7,7 +7,7 @@ $base-size: 18px;
 @mixin size($multiplier) {
   width: $base-size * $multiplier;
   height: $base-size * $multiplier;
-  stroke-width: (round($number: (($base-size / ($base-size * math.pow($multiplier, $multiplier))) * 100)) / 100);
+  stroke-width: (calc( $base-size / ($base-size * math.pow($multiplier, $multiplier)) * 100) / 100);
 }
 
 .icon {
@@ -70,18 +70,18 @@ $base-size: 18px;
   }
 
   &_orange {
-    fill: $orange-dark;
-    stroke: $orange-dark;
+    fill: $orange-mid;
+    stroke: $orange-mid;
   }
 
   &_pink {
-    fill: $pink-dark;
-    stroke: $pink-dark;
+    fill: $pink-mid;
+    stroke: $pink-mid;
   }
 
   &_purple {
-    fill: $purple-dark;
-    stroke: $purple-dark;
+    fill: $purple-mid;
+    stroke: $purple-mid;
   }
 
   &_black {
@@ -188,11 +188,11 @@ $base-size: 18px;
 
   &pink .gradient_colour_ {
     &start {
-      stop-color: $pink-mid;
+      stop-color: $pink-light;
     }
 
     &end {
-      stop-color: $pink-dark;
+      stop-color: $pink-mid;
     }
   }
 

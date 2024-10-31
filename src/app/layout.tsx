@@ -1,6 +1,7 @@
 import Footer from '@/components/shared/Footer';
 import Navbar from '@/components/shared/Navbar';
 import type { Metadata } from 'next';
+import '@/styles/global.scss';
 
 export const metadata: Metadata = {
   title: 'Web Demo',

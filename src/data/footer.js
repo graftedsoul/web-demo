@@ -1,8 +1,8 @@
 export const footerData = {
   topSections: [
     {
-      title: 'ŞipŞak Doğrula',
-      text: 'Üniversiteler Mahallesi, Bilkent CyberPark, CyberPlaza A Blok Kat: 6 No: 603 Çankaya / ANKARA',
+      title: 'Web Demo',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, 6/66, 0612345, Phasellus/ERAT LACUS',
       logo: {
         logoImageAlt: 'logo',
         logoImageUrl: '/images/logo.png',
@@ -11,99 +11,124 @@ export const footerData = {
       links: [
         {
           linkIcon: 'Phone',
-          linkText: '444 0 276',
+          linkText: '0123 666 66 66',
           linkUrl: '/',
         },
         {
           linkIcon: 'Mail',
-          linkText: 'destek@arksigner.com',
-          linkUrl: 'mailto:destek@arksigner.com',
+          linkText: 'info@loremipsumweb.demo',
+          linkUrl: 'mailto:info@loremipsumweb.demo',
         },
         {
           linkIcon: 'Global',
-          linkText: 'www.arksigner.com',
-          linkUrl: 'https://www.arksigner.com',
+          linkText: 'www.loremipsumweb.demo',
+          linkUrl: 'https://www.loremipsumweb.demo',
         },
       ],
     },
     {
-      title: 'Ürünlerimiz',
+      title: 'Lorem Ipsum',
       links: [
         {
-          linkText: 'Arkİmza',
-          linkUrl: 'https://www.arkimza.com',
+          linkText: 'Pellentesque habitant',
+          linkUrl: '/',
         },
         {
-          linkText: 'Aç Bak İmzala',
-          linkUrl: 'https://www.acbakimzala.com/',
+          linkText: 'Dolor sit amet',
+          linkUrl: '/',
         },
         {
-          linkText: 'LiveAuth',
-          linkUrl: 'https://www.arksigner.com/cozumler/liveauth',
+          linkText: 'Nulla molestie augue',
+          linkUrl: '/',
         },
       ],
     },
     {
-      title: 'Sektörler',
+      title: 'Quisque ut Enim',
       links: [
         {
-          linkText: 'Finans',
-          linkUrl: 'https://www.arksigner.com/sektorler/finans-sektoru',
+          linkText: 'Suspendisse',
+          linkUrl: '/',
         },
         {
-          linkText: 'Perakende',
-          linkUrl: 'https://www.arksigner.com/sektorler/perakende-sektoru',
+          linkText: 'Pellentesque convallis',
+          linkUrl: '/',
         },
         {
-          linkText: 'Sağlık',
-          linkUrl: 'https://www.arksigner.com/sektorler/saglik-sektoru',
+          linkText: 'Quisque condimentum nunc',
+          linkUrl: '/',
         },
         {
-          linkText: 'Kamu Kurumları',
-          linkUrl: 'https://www.arksigner.com/sektorler/kamu-kurumlari',
+          linkText: 'Praesent commodo',
+          linkUrl: '/',
+        },
+        {
+          linkText: 'In hac habitasse platea',
+          linkUrl: '/',
+        },
+        {
+          linkText: 'Duis venenatis',
+          linkUrl: '/',
+        },
+        {
+          linkText: 'Nam cursus',
+          linkUrl: '/',
         },
       ],
     },
     {
-      title: 'Bizi Takip Edin',
-      text: 'ArkSigner olarak 2015 yılından bu yana inovatif bakış açısıyla müşterilerimize konforlu teknoloji çözümleri sunuyoruz.',
+      title: 'Web Demo Rox!',
+      text: 'This website was created as a demonstration of my mad skillz (lol). GitHub link down below if you want to see the code. Other icons don\'t lead to any particular page.',
       links: [
         {
           linkIcon: 'YouTube',
-          linkUrl: 'https://www.youtube.com/channel/UCK3erCM_xoqujBAE-hhPUmw',
+          linkUrl: 'https://www.youtube.com',
         },
         {
           linkIcon: 'Instagram',
-          linkUrl: 'https://www.instagram.com/arksigner/',
+          linkUrl: 'https://www.youtube.com',
+        },
+        {
+          linkIcon: 'Twitter',
+          linkUrl: 'https://www.twitter.com',
+        },
+        {
+          linkIcon: 'Tumblr',
+          linkUrl: 'https://www.tumblr.com',
+        },
+        {
+          linkIcon: 'GitHub',
+          linkUrl: 'https://github.com/graftedsoul/web-demo',
         },
       ],
     },
   ],
   bottomSection: {
-    copyright: '© ArkSigner 2024 - ArkSigner Yazılım ve Donanım San. A.Ş.',
+    copyright: '© graftedsoul 2024',
     links: [
       {
-        linkText: 'KVKK ve Gizlilik Politikası',
-        linkUrl:
-          'https://www.arksigner.com/kisisel-verilerin-korunmasi-ve-gizlilik-politikasi',
+        linkText: 'Integer a ligula',
+        linkUrl: '/',
       },
       {
-        linkText: 'Entegre Yönetim Sistemi Politikası',
-        linkUrl:
-          'https://cdn.prod.website-files.com/5e280883321c3d9df8c36d9c/629df43b81707848190a74d6_EYS-PL-01%20Bilgi%20G%C3%BCvenli%C4%9Fi%20ve%20Kalite%20Politikas%C4%B1.pdf',
+        linkText: 'Maecenas',
+        linkUrl: '/',
       },
       {
-        linkText: 'Veri İmha Politikası',
-        linkUrl: 'https://www.arksigner.com/veri-imha-politikasi',
+        linkText: 'Mauris volutpat',
+        linkUrl: '/',
       },
       {
-        linkText: 'Çerez Politikası',
-        linkUrl: 'https://www.arksigner.com/arksigner-cerez-politikasi',
+        linkText: 'Class aptent taciti',
+        linkUrl: '/',
       },
       {
-        linkText: 'KVKK Başvuru Formu',
-        linkUrl:
-          'https://cdn.prod.website-files.com/5e280883321c3d9df8c36d9c/5eda1df855b72c91971bb2e1_KVKK-Basvuru-Formu-ArkSigner.pdf',
+        linkText: 'Curabitur',
+        linkUrl: '/',
+      },
+      {
+        linkText: 'Donec maximus',
+        linkUrl: '/',
       },
     ],
   },

@@ -1,5 +1,5 @@
 export const navbarData = {
-  title: 'ŞipŞak Doğrula',
+  title: 'Web Demo',
   logo: {
     logoImageAlt: 'logo',
     logoImageUrl: '/images/logo.png',
@@ -7,68 +7,119 @@ export const navbarData = {
   },
   links: [
     {
-      linkText: 'Anasayfa',
+      linkText: 'Home',
       linkUrl: '/',
       dropdownItems: [],
     },
     {
-      linkText: 'Hakkında',
+      linkText: 'About',
+      linkUrl: '',
+      dropdownItems: [],
+    },
+    {
+      linkText: 'Praesent',
+      linkUrl: '',
+      dropdownItems: [],
+    },
+    {
+      linkText: 'Lorem Ipsum',
       linkUrl: '',
       dropdownItems: [
         {
-          dropdownText: 'Nedir',
-          dropdownUrl: '/nedir',
+          dropdownText: 'Pellentesque habitant',
+          dropdownUrl: '/',
         },
         {
-          dropdownText: 'Nasıl Çalışır',
-          dropdownUrl: '/nasil-calisir',
+          dropdownText: 'Dolor sit amet',
+          dropdownUrl: '/',
         },
         {
-          dropdownText: 'Özellikler',
-          dropdownUrl: '/ozellikler',
+          dropdownText: 'Nulla molestie augue',
+          dropdownUrl: '/',
         },
       ],
     },
     {
-      linkText: 'Sektörler',
+      linkText: 'Quisque ut Enim',
       linkUrl: '',
       dropdownItems: [
         {
-          dropdownText: 'Ödeme Kuruluşları',
-          dropdownUrl: '/odeme-kurulusları',
+          dropdownText: 'Suspendisse',
+          dropdownUrl: '/',
         },
         {
-          dropdownText: 'Elektronik Ticaret',
-          dropdownUrl: '/elektronik-ticaret',
+          dropdownText: 'Pellentesque convallis',
+          dropdownUrl: '/',
         },
         {
-          dropdownText: 'Sağlık',
-          dropdownUrl: '/saglik',
+          dropdownText: 'Quisque condimentum nunc',
+          dropdownUrl: '/',
         },
         {
-          dropdownText: 'Turizm',
-          dropdownUrl: '/turizm',
+          dropdownText: 'Praesent commodo',
+          dropdownUrl: '/',
         },
         {
-          dropdownText: 'Kurum İçi İşlemler',
-          dropdownUrl: '/kurum-ici-islemler',
+          dropdownText: 'In hac habitasse platea',
+          dropdownUrl: '/',
         },
         {
-          dropdownText: 'Kripto Borsası',
-          dropdownUrl: '/kripto-borsasi',
+          dropdownText: 'Duis venenatis',
+          dropdownUrl: '/',
+        },
+        {
+          dropdownText: 'Nam cursus',
+          dropdownUrl: '/',
+        },
+      ],
+    },
+    
+    {
+      linkText: 'Habitasse Platea',
+      linkUrl: '',
+      dropdownItems: [
+        {
+          dropdownText: 'Integer a ligula',
+          dropdownUrl: '/',
+        },
+        {
+          dropdownText: 'Maecenas',
+          dropdownUrl: '/',
+        },
+        {
+          dropdownText: 'Mauris volutpat',
+          dropdownUrl: '/',
+        },
+        {
+          dropdownText: 'Class aptent taciti',
+          dropdownUrl: '/',
+        },
+        {
+          dropdownText: 'Curabitur',
+          dropdownUrl: '/',
+        },
+        {
+          dropdownText: 'Donec maximus',
+          dropdownUrl: '/',
         },
       ],
     },
     {
-      linkText: 'İletişim',
-      linkUrl: '/iletisim',
+      linkText: 'Vestibulum Porttitor',
+      linkUrl: '',
       dropdownItems: [],
     },
   ],
   buttons: [
     {
-      buttonText: 'Şimdi Deneyin',
+      buttonText: 'Log In',
       buttonUrl: '/',
+      buttonType: 'outline-primary',
+    },
+    {
+      buttonText: 'Start Now',
+      buttonUrl: '/',
+      buttonType: 'primary',
     },
   ],
 };

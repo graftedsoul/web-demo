@@ -8,24 +8,24 @@ const DesktopNavbar = () => {
 
   return (
     <nav
-      className="navbar px-6 px-lg-3 px-xl-8 container-lg"
-      id="global_navbar"
-      data-bs-theme="dark"
+      className='navbar w-100 d-flex justify-between m-0 px-3 px-md-6 px-lg-3 px-xl-8'
+      id='global_navbar'
+      data-bs-theme='dark'
     >
-      <Link className="navbar-brand" href={navbarData.logo.logoUrl}>
+      <Link className='navbar-brand' href={navbarData.logo.logoUrl}>
         <Image
           src={navbarData.logo.logoImageUrl}
           alt={navbarData.logo.logoImageAlt}
-          width={90}
-          height={35}
+          width={128}
+          height={20}
           priority={true}
         />
       </Link>
 
       {/* nav content */}
-      <div className="nav_content d-flex gap-5 align-items-center">
+      <div className='nav_content d-flex gap-5 align-items-center'>
         {/* navigation links list */}
-        <ul className="text_xsmall navbar-nav d-flex flex-row gap-4">
+        <ul className='text_xsmall navbar-nav d-flex flex-row gap-4'>
           {navbarData.links.map((link, index) => (
             <li
               className={`nav-item ${link.dropdownItems.length > 0 ? ' dropdown' : ''}`}
@@ -50,9 +50,9 @@ const DesktopNavbar = () => {
               {/* dropdown links list */}
               {link.dropdownItems.length > 0 && (
                 <ul
-                  className="text_small dropdown-menu bg-white position-absolute m-0 border-0 rounded-0"
+                  className='text_small dropdown-menu bg-white position-absolute m-0 border-0 rounded-0'
                   style={{ top: 'calc(100% + 0.7rem + 1px)', left: '0' }}
-                  data-bs-theme="light"
+                  data-bs-theme='light'
                 >
                   {link.dropdownItems.map((dropdown, index) => (
                     <li
@@ -62,7 +62,7 @@ const DesktopNavbar = () => {
                       <Link
                         id={'dropdownItem_' + index}
                         href={dropdown.dropdownUrl}
-                        className="dropdown-item px-3 py-2"
+                        className='dropdown-item px-3 py-2'
                       >
                         {dropdown.dropdownText}
                       </Link>
@@ -75,10 +75,10 @@ const DesktopNavbar = () => {
         </ul>
 
         {/* buttons list */}
-        <div className="buttons_container">
+        <div className='buttons_container d-flex gap-2'>
           {navbarData.buttons.map((button, index) => (
             <Link
-              className="btn btn-primary button_xsmall"
+              className={`btn ${'btn-' + button.buttonType} button_xsmall`}
               href={button.buttonUrl}
               key={'navbarCTA_' + index}
               id={'navbarCTA_' + index}
