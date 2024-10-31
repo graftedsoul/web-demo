@@ -43,7 +43,6 @@ const UseCasesSection = () => {
       </div>
 
       <div className='m-0 p-0 d-block'>
-        // @ts-ignore
         <Carousel slides={useCasesData.items} iconSet={icons} />
       </div>
 
